@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Us</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 0;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .logo {
+            float: left;
+            margin: 15px;
+            height: 100px;
+            padding: 10px
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 70px 16px;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+
+        h1 {
+            font-size: 35pt;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 14pt;
+        }
+
+        #header {
+            display: flex;
+        }
+
+        /* .btn-transition {
+            transition: padding 0.2s ease-in-out;
+        } */
+
+        /* .banner-heading {
+            margin: 0;
+            padding-top: 50px;
+            font-size: 45pt;
+            color: white;
+            margin-bottom: 70px;
+        } */
+
+        /* .begin-btn {
+            cursor: pointer;
+            border: 3px solid white;
+            color: white;
+            font-size: 22pt;
+            padding: 5px 50px;
+            display: table;
+            font-weight: 600;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        .begin-btn:hover {
+            padding: 5px 60px;
+        }
+
+        .begin-btn:active {
+            padding: 5px 40px;
+
+        } */
+
+        /* .banner-select td {
+            padding: 25px 50px;
+            color: white;
+        } */
+
+        .footer {
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        .footer table {
+            max-width: 600px;
+            margin: auto;
+            width: 80%;
+            padding: 25px 0;
+        }
+
+        #langSelect {
+            position: absolute;
+            height: 30px;
+            width: 100px;
+            right: 10px;
+            top: 60px;
+            padding: 0;
+        }
+
+        /* CSS for contact us */
+        /* Style inputs with type="text" and textareas */
+        input[type=text],
+        textarea {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            /* Some padding */
+            border: 1px solid #ccc;
+            /* Gray border */
+            border-radius: 4px;
+            /* Rounded borders */
+            box-sizing: border-box;
+            /* Make sure that padding and width stays in place */
+            margin-top: 6px;
+            /* Add a top margin */
+            margin-bottom: 16px;
+            /* Bottom margin */
+            resize: vertical
+                /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        #submitBtn {
+            height: 32px;
+            width: 100px;
+            border-radius: 4px;
+            background-color: #729d39;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        #main-content {
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 3%;
+            background-color: #729d39;
+            width: 80%;
+            height: 900px;
+        }
+
+        #main-banner {
+            background-color: #ebedec;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 25px;
+        }
+
+        @media screen and (max-width: 720px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+                clear: left;
+            }
+
+            .topnav a {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav responsive" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunctionSideMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <img class="logo" id="logo" src="img/logo.png" />
+
+        <a class="text_a" href="index.html">Home</a>
+        <a class="text_a" href="about.html">About Us</a>
+        <a class="text_a" href="contact-us.html">Contact Us</a>
+
+    </div>
+
+    <select id="langSelect">
+        <option value="English">English</option>
+        <option value="Arabic">عربى</option>
+    </select>
+
+    <div id='main-content'>
+        <div id="main-banner">
+            <div class="font-white">
+                <h1 id="contact_h1">Contact Us </h1>
+                <p class="contact_p">Please send us a message</p>
+                <p class="contact_p">We will respond as soon as possible</p>
+            </div>
+
+            <form id="contact_form" onsubmit="return validate()" action="\PHPMailer\mail.php" method="post">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+                <label for="lname">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter yor email please">
+                <label for="subject" id="subject">Subject</label>
+                <textarea name="subject" placeholder="Write message" style="height:200px"></textarea>
+
+                <button type="submit" id="submitBtn" formaction="\PHPMailer\mail.php">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function validate() {
+        var fn = document.getElementById('fname').value;
+        var ln = document.getElementById('lname').value;
+        var eml = document.getElementById('email').value;
+        /* var pn=document.getElementById('phoneNo').value; */
+        var subject = document.getElementById('subject').value;
+
+        if (fn.length == 0) {
+            alert("please enter your First Name");
+            return false;
+        }
+
+        if (ln.length == 0) {
+            alert("please enter your Last Name ");
+            return false;
+        }
+
+        /* if(eml.length==0){
+        alert("please enter your Email first ");
+        return false;
+        } */
+        var pos = eml.indexOf('@');
+        //alert(pos);
+        if (pos == -1) {
+            alert('please provide valid email');
+            return false;
+        }
+
+        if (subject == "") {
+            alert('please write message first');
+            return false;
+        }
+        return true;
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    function myFunctionSideMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    $(document).ready(function () {
+        var cookie = getCookie('arabic-dla');
+        if (cookie == null) {
+            var obj = {
+                language: 'English',
+            };
+            setCookie('arabic-dla', JSON.stringify(obj), 365);
+        } else {
+            cookie = JSON.parse(cookie);
+            $('#langSelect').val(cookie.language);
+        }
+
+        //Defines language for each element
+        var pageContent = {
+            navigation: {
+                en: ['Home', 'About Us', 'Contact Us'],
+                ar: ['منزل', 'معلومات عنا', 'اتصل بنا']
+            },
+            contact_h1: {
+                en: 'Contact Us',
+                ar: 'اتصل بنا'
+            },
+            contact_p: {
+                en: ['Please send us a message.', 'we will respond as soon as possible'],
+                ar: ['الرجاء أرسل لنا رسالة', 'سنجيب في أسرع وقت ممكن']
+            },
+            contact_form_labels: {
+                en: ['First Name', 'Last Name', 'Email', 'Subject'],
+                ar: ['الاسم الأول', 'اللقب/ا', 'سم العائلة', 'الموضوع']
+            },
+            SubmitBtn: {
+                en: 'Submit',
+                ar: 'إرسال'
+            }
+        };
+
+        //Defines elements in HTML
+        var navigation = $('#myTopnav').find('.text_a'); //Navigation bar
+        var contact_h1 = $('.font-white').find('#contact_h1'); //div #main-banner .font-white h1
+        var contact_p = $('.font-white').find('.contact_p');  //div #main-banner .font-white p
+        var contact_form_labels = $('#contact_form').find('label'); //form contact_form labels
+        var SubmitBtn = $('#contact_form').find('#submitBtn'); //find submit button
+
+        //Initialise language based on select value on page load
+        setLanguage();
+
+        // Triggers change of language when language select is changed
+        $('#langSelect').on('change', function () {
+            var cookie = getCookie('arabic-dla');
+            cookie = JSON.parse(cookie);
+            cookie.language = $(this).val();
+            setCookie('arabic-dla', JSON.stringify(cookie), 365);
+            setLanguage();
+        });
+
+        //Calls the relevant function based on which language is selected
+        function setLanguage() {
+            var language = $('#langSelect').val();
+            switch (language) {
+                case 'Arabic':
+                    arabic();
+                    break;
+                case 'English':
+                    english();
+                    break;
+                default:
+                    english();
+            }
+        }
+
+        //Sets elements to Arabic translations
+        function arabic() {
+            navigation.each(function (index) {
+                $(this).text(pageContent.navigation.ar[index])
+            });
+            contact_h1.each(function (index) {
+                $(this).text(pageContent.contact_h1.ar).css("direction", "rtl")
+            });
+            $(SubmitBtn).text(pageContent.SubmitBtn.ar).css("direction", "ltr");
+            contact_p.each(function (index) {
+                $(this).text(pageContent.contact_p.ar[index]).css("direction", "rtl")
+            });
+            contact_form_labels.each(function (index) {
+                $(this).text(pageContent.contact_form_labels.ar[index]).css("direction", "rtl")
+            });
+
+        }
+
+        //Sets elements to English translations
+        function english() {
+            navigation.each(function (index) {
+                $(this).text(pageContent.navigation.en[index]);
+            });
+            contact_h1.each(function (index) {
+                $(this).text(pageContent.contact_h1.en).css("direction", "ltr")
+            });
+            SubmitBtn.each(function (index) {
+                $(this).text(pageContent.SubmitBtn.en).css("direction", "ltr")
+            });
+            contact_p.each(function (index) {
+                $(this).text(pageContent.contact_p.en[index]).css("direction", "ltr")
+            });
+            contact_form_labels.each(function (index) {
+                $(this).text(pageContent.contact_form_labels.en[index]).css("direction", "ltr")
+            });
+
+        }
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        function deleteCookie(name) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+    });
+</script>

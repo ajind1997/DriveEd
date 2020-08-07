@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+<!--    <android.support.design.widget.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="match_parent"-->
+<!--    app:headerLayout="@layout/header"-->
+<!--    app:menu="@menu/main_menu"-->
+<!--    android:layout_gravity="start"-->
+<!--    android:background="@android:color/white"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                android:navigationIcon="@drawable/menu">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:layout_marginEnd="200dp"
+                    android:foregroundGravity="center_horizontal"/>
+
+            </android.support.v7.widget.Toolbar>
+
+<!--                android:id="@+id/toolbar"-->
+<!--                layout="@layout/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/white"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:navigationIcon="@drawable/menu"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="675dp"
+                android:background="#669334"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/practice_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/practice_mode"
+                    android:paddingLeft="50dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/practicemode"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/feedback_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/feedback_mode"
+                    android:onClick="selectMode"
+                    android:paddingLeft="50dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/feedbackmode"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="24sp"
+                    app:srcCompat="@drawable/feedback_mode" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>

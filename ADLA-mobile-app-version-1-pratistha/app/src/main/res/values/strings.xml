@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ADLA</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_navigation_menu" translatable="false">NavigationMenu</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="practicemode">Practice Mode</string>
+    <string name="feedbackmode">Feedback Mode</string>
+    <string name="language">Select Language</string>
+    <string name="Home">Home</string>
+    <string name="About">About Us</string>
+    <string name="Contact">Contact Us</string>
+    <string name="submit">Submit</string>
+    <string name="first_name">First Name</string>
+    <string name="hint_firstname">Please enter your first name</string>
+    <string name="hint_lastname">Please enter your last name</string>
+    <string name="write_message">Write your feedback here</string>
+    <string name="last_name">Last Name</string>
+    <string name="subject">Subject</string>
+    <string name="reply">Please send us a message</string>
+
+    <string name="aboutusText">
+        DriverED is a friendly, trusted and professional driving school that helps people learn the skills they need to get their driver’s licence.\n\n
+        We help people that find it hard to practise driving for a range of reasons, such as lack of access to a car, difficulty finding a suitable instructor, and the high cost of regular driving lessons.\n\n
+        We’ll match you with a fully trained, qualified driving instructor, so you can be sure you’re learning from a professional that will help you get the experience you need. Everyone is welcome to take part and we can tailor lessons to make sure they are right for you, by providing instructors who are multilingual, from different cultural backgrounds or a particular gender. We have specialised experience in working with people who are migrants, refugees, or don’t speak much English.
+</string>
+</resources>

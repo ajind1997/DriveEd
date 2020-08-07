@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Test Modes</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+          crossorigin="anonymous"></script>
+  <style>
+
+    /* * {
+      box-sizing: border-box;
+    } */
+
+    body {
+      font-family: Calibri, sans-serif;
+      margin: 0;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: white;
+    }
+
+    .logo{
+      float:left;
+      margin:15px;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding: 70px 16px;
+      text-decoration: none;
+      font-size: 25px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .mode-img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      width: 25%;
+    }
+
+    .text-center{
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 35pt;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 14pt;
+    }
+
+    #header {
+      display: flex;
+    }
+
+    #main-banner {
+      background-color: #729d39;
+      height: 700px;
+    }
+
+    .btn-transition {
+      transition: padding 0.2s ease-in-out;
+    }
+
+    .banner-heading {
+      margin: 0;
+      padding-top: 50px;
+      font-size: 45pt;
+      color: white;
+      margin-bottom: 70px;
+    }
+
+    .begin-btn {
+      cursor: pointer;
+      border: 3px solid white;
+      color: white;
+      font-size: 22pt;
+      padding: 5px 50px;
+      display: table;
+      font-weight: 600;
+      margin: auto;
+      margin-bottom: 60px;
+    }
+
+    .begin-btn:hover {
+      padding: 5px 60px;
+    }
+
+    .begin-btn:active {
+      padding: 5px 40px;
+
+    }
+
+    /*.banner-select {*/
+    /*display:flex;*/
+    /*color: white;*/
+    /*width: 600px;*/
+    /*margin: auto;*/
+    /*}*/
+
+    .banner-select td {
+      padding: 25px 50px;
+      color: white;
+    }
+
+    .column {
+      float: left;
+      width: 46%;
+      height: 275px;
+      padding: 10px;
+      margin: 10px;
+      background-color: #ffffff;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .top-padding{
+      padding-top: 100px;
+    }
+
+
+    @media (max-width:1000px) {
+
+    }
+
+    .main-content {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: white;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+    }
+
+    .footer table {
+      max-width: 600px;
+      margin: auto;
+      width: 80%;
+      padding: 25px 0;
+    }
+
+    #langSelect {
+      position: absolute;
+      height: 30px;
+      width: 100px;
+      right: 10px;
+      top: 50px;
+      padding: 0;
+    }
+
+    .font-white {
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        clear:left;
+      }
+
+      .topnav a {
+        padding: 14px 16px;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .top-padding{
+        padding-top: 50px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="topnav responsive" id="myTopnav">
+  <a href="javascript:void(0);" class="icon" onclick="myFunctionSideMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <img class="logo" id ="logo" src="img/logo.png" style="height:100px; padding:10px"/>
+  <div id="navi">
+    <a href="index.html" >Home</a>
+    <a href="practice.html">Practice</a>
+    <a href="about.html">About</a>
+    <a href="contact-us.html">Contact Us</a>
+  </div>
+</div>
+
+<select id="langSelect">
+  <option value="English">English</option>
+  <option value="Arabic">عربى</option>
+</select>
+</div>
+
+<div class='main-content' id="main-banner">
+  <div class="row top-padding">
+    <a href="feedback_mode.php">
+      <div class="column" id='FBmode'>
+        <h2 class="text-center">Feedback Mode</h2>
+        <img class="mode-img" src="img/feedback.png" alt="feedback"</img>
+        <p class="text-center"> Correct answer is displayed after you answer each question</p>
+      </div>
+    </a>
+    <a href="practice_mode.php">
+      <div class="column" id='PCmode'>
+        <h2 class="text-center">Practice Mode</h2>
+        <img class="mode-img" src="img/practice-test.png" alt="feedback"</img>
+        <p class="text-center"> Your result is displayed after you answer all questions.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+  function myFunctionSideMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  $(document).ready(function() {
+    var cookie = getCookie('arabic-dla');
+    if (cookie == null) {
+      var obj = {
+        language: 'English',
+      };
+      setCookie('arabic-dla', JSON.stringify(obj), 365);
+    } else {
+      cookie = JSON.parse(cookie);
+      $('#langSelect').val(cookie.language);
+    }
+
+    //Defines language for each element
+    var pageContent = {
+      navigation: {
+        en: ['Home', 'Practice', 'About', 'Contact Us'],
+        ar: ['منزل', 'الدروس', 'معلومات عنا', 'اتصل بنا']
+      },
+      feedbackMode: {
+        en: 'Feedback Mode',
+        ar: ' وضع الملاحظات'
+      },
+      practiceMode: {
+        en: 'Practice Mode',
+        ar: ' وضع التدريب'
+      }
+    };
+
+    //Defines elements in HTML
+    var nagivation = $('#navi').find('a'); //Navigation bar
+    var feedbackMod = $('#FBmode').find('h2'); //'Feedback Mode'
+    var practiceMod = $('#PCmode').find('h2'); //'Practice Mode'
+
+
+    //Initialise language based on select value on page load
+    setLanguage();
+
+    // Triggers change of language when language select is changed
+    $('#langSelect').on('change', function() {
+      var cookie = getCookie('arabic-dla');
+      cookie = JSON.parse(cookie);
+      cookie.language = $(this).val();
+      setCookie('arabic-dla', JSON.stringify(cookie), 365);
+      setLanguage();
+    });
+
+    //Calls the relevant function based on which language is selected
+    function setLanguage() {
+      var language = $('#langSelect').val();
+      switch(language) {
+        case 'Arabic':
+          arabic();
+          break;
+        case 'English':
+          english();
+          break;
+        default:
+          english();
+      }
+    }
+
+    //Sets elements to Arabic translations
+    function arabic() {
+      nagivation.each(function(index) {
+        $(this).text(pageContent.navigation.ar[index]);
+      });
+        $(feedbackMod).text(pageContent.feedbackMode.ar);
+        $(practiceMod).text(pageContent.practiceMode.ar);
+
+
+
+    }
+
+    //Sets elements to English translations
+    function english() {
+      nagivation.each(function(index) {
+        $(this).text(pageContent.navigation.en[index]);
+        });
+        $(feedbackMod).text(pageContent.feedbackMode.en);
+        $(practiceMod).text(pageContent.practiceMode.en);
+
+    }
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+    function deleteCookie(name) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+  });
+</script>
